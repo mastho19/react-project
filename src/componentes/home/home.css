@@ -1,0 +1,13 @@
+.titulo {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.comida-tipica {
+    display: flex;
+    justify-content: center;
+}
+
+.img {
+    width: 500px;
+}

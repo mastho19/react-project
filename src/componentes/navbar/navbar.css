@@ -1,0 +1,13 @@
+.menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: tomato;
+    width: 100vw;
+    height: 40px;
+}
+
+.link {
+    text-decoration: none;
+    padding: 8px;
+    color: black;
+}
