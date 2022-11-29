@@ -1,15 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Home from './componentes/home/Home';
-import Navbar from './componentes/navbar/Navbar'
+import Navbar from './components/estaticos/navbar/Navbar'
+import Footer from './components/estaticos/footer/Footer';
+import Login from './components/login/Login'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/Home/Home';
 
 function App() {
   return (
-    <>
-      < Navbar />
-      <Home />
-    </>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path='/login' element={<Login />}/>
+        <Route path='/home' element={<Home/>}/>
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 

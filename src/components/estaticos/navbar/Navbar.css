@@ -1,0 +1,12 @@
+.cursor{
+    cursor: pointer;
+    color: #AB47BC;
+}
+
+.text-decorator-none{
+    text-decoration: none;
+}
+
+.boxNav {
+    background-color: #E0E0E0;
+}
