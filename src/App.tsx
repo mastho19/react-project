@@ -2,9 +2,11 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/estaticos/navbar/Navbar'
 import Footer from './components/estaticos/footer/Footer';
-import Login from './components/login/Login'
+import Login from './paginas/login/Login'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './components/Home/Home';
+import Home from './paginas/Home/Home';
+import CadastroUsuario from './paginas/cadastroUsuario/cadastroUsuario';
+import ListaTema from './components/listaTemas/temas/ListaTema';
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <Routes>
         <Route path='/login' element={<Login />}/>
         <Route path='/home' element={<Home/>}/>
+        <Route path='/cadastro-usuario' element={<CadastroUsuario/>}/>
+        <Route path="/temas" element={<ListaTema />} />
       </Routes>
       <Footer />
     </Router>
