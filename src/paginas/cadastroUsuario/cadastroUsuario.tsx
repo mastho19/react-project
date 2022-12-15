@@ -54,7 +54,7 @@ function CadastroUsuario() {
         cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
         alert('Usuario cadastrado com sucesso')
         }else{
-            alert('Dados inconsistentes. Favor verificar as informações de cadastro.')
+        alert('Dados inconsistentes. Favor verificar as informações de cadastro.')
         }
     }
     return (

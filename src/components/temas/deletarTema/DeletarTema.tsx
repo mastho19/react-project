@@ -2,11 +2,11 @@ import React, {useState, useEffect, ChangeEvent} from 'react'
 import { Container, Typography, TextField, Button } from "@material-ui/core"
 import {useNavigate, useParams } from 'react-router-dom'
 import './DeletarTema.css';
-import useLocalStorage from 'react-use-localstorage';
 import Tema from '../../../models/Tema';
 import { buscaId, post, put } from '../../../services/service';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 
 
 function CadastroTema() {
@@ -22,7 +22,16 @@ function CadastroTema() {
 
     useEffect(() => {
         if (token == "") {
-            alert("Você precisa estar logado")
+            toast.error('Você precisa estar logado !', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                });
             navigate("/login")
     
         }
